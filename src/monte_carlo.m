@@ -1,0 +1,1 @@
+function [aopt, fopt] = monte_carlo(f)  n = 133;  iters = 10000;  aopt = rand(1,n) > 0.5;  fopt= f(aopt);  for i = 2:iters    a = rand(1,n) > 0.5;    fa = f(a);    if(fa >= fopt)      aopt = a;      fopt = fa;    end  end  end
