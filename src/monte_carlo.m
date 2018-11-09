@@ -8,10 +8,10 @@ function [aopt, fopt] = montecarlo(eval_budget)
     size = para.n;
     vector = zeros(size, 1);
     ftn = repmat(0, eval_budget);
-    flag = 0; 
     % create valid individual
     parfor i = 1:eval_budget
-      while flag == 0  
+      flag = 0;
+      while flag == 0
         for j = 1:size % create an individual as random vector from lower bound to uppper bound
           vector(j) = randi([lower_b(j), upper_b(j)]); 
         end
