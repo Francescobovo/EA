@@ -24,7 +24,7 @@ function [aopt, fopt] = montecarlo(eval_budget)
         ftn(i) = ftn(i-1);      % take the previous fitness if better
       end
     end
-    fopt = min(ftn);
+    fopt = min(min(ftn(ftn>0)));
     aopt = vector;
 
 end
