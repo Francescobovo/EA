@@ -1,2 +1,2 @@
 # EA
-Assignments for Evolutionary Algorithms
+For a detailed description of the implementation, check the `report.pdf` file.
